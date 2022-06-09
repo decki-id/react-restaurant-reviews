@@ -8,6 +8,6 @@ app.use(express.json())
 app.use(cors())
 app.use("/api/v1/restaurants", restaurants)
 
-app.use("*", (req, res) => res.status(404).json({ error: "not found" }))
+app.use("*", (req, res) => res.status(404).json({ error: "Connection error, goddammit!" }))
 
 export default app
