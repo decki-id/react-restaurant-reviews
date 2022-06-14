@@ -25,15 +25,14 @@ const Restaurant = props => {
         getRestaurant(params_id)
     }, [params_id])
 
-    const
-        deleteReview = (reviewId, index) => {
-            RestaurantDataService.deleteReview(reviewId).then(response => {
-                setRestaurant((prevState) => {
-                    prevState.reviews.splice(index, 1)
-                    return ({ ...prevState })
-                })
-            }).catch(e => { console.log(e) })
-        }
+    const deleteReview = (reviewId, index) => {
+        RestaurantDataService.deleteReview(reviewId, props.user.id).then(response => {
+            setRestaurant((prevState) => {
+                prevState.reviews.splice(index, 1)
+                return ({ ...prevState })
+            })
+        }).catch(e => { console.log(e) })
+    }
 
     return (
         <div>
@@ -85,7 +84,7 @@ const Restaurant = props => {
                 <div><br /><p>No restaurant selected.</p></div>
             )}
         </div>
-    );
+    )
 }
 
 export default Restaurant
