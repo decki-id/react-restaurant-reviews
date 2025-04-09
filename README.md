@@ -1,2 +1,3 @@
-# restaurant-reviews
-Learn MERN stack (MongoDB, ExpressJs, ReactJs, NodeJs) from freeCodeCamp.org, build a simple Restaurant Reviews app.
+# React Restaurant Reviews
+
+Learn MERN stack (MongoDB, ExpressJs, ReactJs, NodeJs) from Free Code Camp, build a simple Restaurant Reviews app.
